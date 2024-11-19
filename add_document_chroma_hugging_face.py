@@ -14,7 +14,7 @@ load_dotenv()
 def initialize_vectorstore():
 
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    vectorstore = Chroma(embedding_function=embeddings,persist_directory="../data/DB/vectorstore")  
+    vectorstore = Chroma(embedding_function=embeddings,persist_directory="./data/DB/vectorstore")  
     return vectorstore
 
 if __name__ == "__main__":
